@@ -84,7 +84,7 @@ public class UserApiController {
         return UserResponse.of(userDoc);
     }
 
-    @DeleteMapping(UserRoutes.By_ID)
+    @DeleteMapping(UserRoutes.BY_ID)
     public String delete(@PathVariable String id) throws ObjectIdParseException {
         if(!ObjectId.isValid(id)) throw new ObjectIdParseException();
 
